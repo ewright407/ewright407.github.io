@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Wright · Computer Science & Data Engineering</title>
+  <meta name="description" content="Portfolio of Ethan Wright, a computer science student at St. Mary's College of Maryland who builds data pipelines and automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply the saved theme before the page paints so it doesn't flash.
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-logo" href="#top" aria-label="Ethan Wright, back to top">Ethan Wright<span>.</span></a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span>
+        <span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ABOUT -->
+    <div class="hero">
+      <canvas id="ripple-bg" aria-hidden="true"></canvas>
+    <section id="about" class="about container">
+      <div class="about-text">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Ethan Wright</h1>
+        <p class="lead">I build and maintain SQL data pipelines that turn raw data into clean, reliable tables people can actually use.</p>
+        <p>I'm a computer science student at St. Mary's College of Maryland, graduating in 2027, and I played on the men's soccer team. I'm also a data engineering intern at Navy Federal Credit Union, where I maintain SQL data pipelines.</p>
+        <p>Outside of work, I build my own pipelines that pull weather and stock data from APIs into SQL Server. Next, I want to keep growing as a data engineer and take on bigger, more complex data systems.</p>
+        <div class="about-actions">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <figure class="about-photo">
+        <img src="images/ethan.jpg"
+             alt="Ethan Wright in a navy and gold number 2 St. Mary's jersey, dribbling a soccer ball upfield during a match"
+             width="1400" height="932"
+             onerror="this.parentElement.classList.add('no-photo')">
+        <span class="photo-fallback" aria-hidden="true">EW</span>
+      </figure>
+    </section>
+
+    </div>
+
+    <!-- INTERESTS -->
+    <section id="interests" class="section container">
+      <h2 class="section-title"><span class="num">01</span> Interests</h2>
+      <ul class="interest-grid">
+        <li class="interest">
+          <h3>College soccer</h3>
+          <p>I played on the St. Mary's men's soccer team. Balancing practices and match days with CS classes taught me to manage my time.</p>
+        </li>
+        <li class="interest">
+          <h3>Data engineering</h3>
+          <p>I use and maintain SQL data pipelines, turning messy raw data into clean, queryable tables.</p>
+        </li>
+        <li class="interest">
+          <h3>Getting outside</h3>
+          <p>I like being outdoors, experiencing new places around the world, and hanging out with friends.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title"><span class="num">02</span> Projects</h2>
+      <div class="project-grid">
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Personal Portfolio Website</h3>
+            <a class="project-link" href="https://github.com/ewright407/ewright407.github.io" target="_blank" rel="noopener" aria-label="Portfolio website code on GitHub">Code ↗</a>
+          </div>
+          <p>This site, written from scratch in plain HTML, CSS and JavaScript with no template or framework. It has a responsive layout, a dark mode that remembers your choice, an animated canvas background, and colors checked against WCAG contrast guidelines. It's hosted on GitHub Pages.</p>
+          <ul class="tags" aria-label="Tech used">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Canvas</li><li>GitHub Pages</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>COSC 301 Group Project</h3>
+            <a class="project-link" href="https://github.com/ssthapit-smcm/COSC301-P2" target="_blank" rel="noopener" aria-label="COSC 301 group project code on GitHub">Code ↗</a>
+          </div>
+          <p>A team project for COSC 301 at St. Mary's College of Maryland, built with a group of classmates and managed together in a shared GitHub repository.</p>
+          <ul class="tags" aria-label="Tech used">
+            <li>Team project</li><li>Git &amp; GitHub</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" class="section container">
+      <h2 class="section-title"><span class="num">03</span> Experience &amp; education</h2>
+      <div class="two-col">
+        <div>
+          <h3 class="col-title">Experience</h3>
+          <ol class="timeline">
+            <li>
+              <p class="when">2026</p>
+              <h4>Software Developer, R&amp;D Team · Chesapeake Community Connect</h4>
+              <p>Software developer on a team project at St. Mary's College of Maryland.</p>
+            </li>
+            <li>
+              <p class="when">2025 – present</p>
+              <h4>Data Engineering Intern · Navy Federal Credit Union</h4>
+              <p>Build and maintain data processes in SQL.</p>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="col-title">Education</h3>
+          <ol class="timeline">
+            <li>
+              <p class="when">2024 – 2027 (expected)</p>
+              <h4>St. Mary's College of Maryland</h4>
+              <p>B.S. in Computer Science. Relevant courses: Algorithms and Data Structures, Computer Architecture, Game Design.</p>
+            </li>
+            <li>
+              <p class="when">2023 – 2024</p>
+              <h4>Seton Hall University</h4>
+              <p>Transferred to St. Mary's after my first year.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <h3 class="col-title skills-title">Skills</h3>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>SQL / T-SQL, C#, Python, JavaScript, HTML, CSS, Lua</dd></div>
+        <div><dt>Data tools</dt><dd>SQL Server, SSIS, SSDT, SSISDB</dd></div>
+        <div><dt>Dev tools</dt><dd>Visual Studio, Git &amp; GitHub, Windows Task Scheduler, PICO-8</dd></div>
+      </dl>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact">
+      <h2 class="section-title"><span class="num">04</span> Contact</h2>
+      <p class="lead">Feel free to reach out.</p>
+      <a class="btn btn-primary btn-lg" href="mailto:ewrigh407@gmail.com">ewrigh407@gmail.com</a>
+      <ul class="contact-links">
+        <li><a href="mailto:ewrigh407@gmail.com">Email</a></li>
+        <li><a href="https://github.com/ewright407" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/ethanmwright1" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>Designed and built by Ethan Wright · <span id="year">2026</span></p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
